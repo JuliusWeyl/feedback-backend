@@ -1,9 +1,9 @@
 const express = require('express');
-require('./services/passport');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
-//mongoose.connect(keys.mongoURI,{ useNewUrlParser: true , useUnifiedTopology: true });
+require('./models/User');
+require('./services/passport');
 
 mongoose
   .connect(keys.mongoURI, {
